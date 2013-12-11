@@ -1,0 +1,2 @@
+# Powershell Copy Contents of Folder
+Copy-Item <SOURCE>\* <DESTINATION> -recurse
