@@ -28,6 +28,9 @@ git push --tags
 # Nuke a remote branch
 git push <REMOTE NAME> :<BRANCH NAME>
 
+# Change the Remote Repo URL
+git remote set-url origin <new url>
+
 # Nuke a local/remote tag
 git tag -d <TAG NAME>
 git push origin :refs/tags/<TAG NAME>
