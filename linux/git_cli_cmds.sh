@@ -15,6 +15,9 @@ git reset --soft HEAD~3; git commit
 # Create a git alias
 git config --global alias.<NAME> "<CODE>"
 
+# Turn off SSL Verification (SHOULD ONLY BE USED WHEN NEEDED AND REVERTED)
+git config --global http.sslVerify false
+
 # Create an archive of a remote branch
 git archive --format=tar.gz --remote=ssh://<REPO> <TAG OR BRANCH> > <FILENAME>.tgz
 git archive --format=tar.gz --remote=git@<REPO> <TAG OR BRANCH> -o <FILENAME>.tgz
