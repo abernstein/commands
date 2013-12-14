@@ -3,19 +3,19 @@ commands
 
 General Lists of Commands
 
-# Windows
+## Windows
 http://windows.microsoft.com/en-us/windows7/20-pc-shortcuts
 
 http://technet.microsoft.com/en-us/library/hh848793.aspx
 
-# Linux
+## Linux
 General System Administration
 
-# Puppet
+## Puppet
 Configuration Management
 
-# SCM
+## SCM
 Source Control Management
 
-# SQL
+## SQL
 Structured Query Languages
