@@ -29,6 +29,10 @@ diff -C0 <file1> <file2> | grep -e "^\!"
 sudo /sbin/service --status-all | grep -i "running"
 /sbin/chkconfig --list | grep 3:on
 
+# Find list of all service and standard port numbers and protocol types
+less /etc/services
+grep <PORT> /etc/services
+
 # Find all certificates
 sudo find / -xdev -noleaf -type f -name *.pem -or -name *.crt
 
@@ -51,7 +55,7 @@ rpm -qa --queryformat "%{installtime} (%{installtime:date}) %{name}\n" | sort -n
 yum clean |packages|metadata|dbcache|all
 
 # Check a URL
-curl -v http://ftetest.intranet.gdg:8280/api/request -d request=getToken
+curl -v <URL> -d <DATA>
 
 # Search man pages
 man -k <SERVICE>
