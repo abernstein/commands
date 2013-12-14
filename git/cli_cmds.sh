@@ -119,7 +119,6 @@ git am
 git --git-dir=PATH_TO_OTHER_REPOSITORY_HERE/.git format-patch -k -1 --stdout COMMIT_HASH_ID_HERE| git am -3 -k
 
 
-
 # Review the contents of a commit
 git cat-file commit HEAD
 git cat-file commit <COMMIT>..<COMMIT>~8
