@@ -1,2 +1,5 @@
 # Powershell Copy Contents of Folder
 Copy-Item <SOURCE>\* <DESTINATION> -recurse
+
+# Move Putty Sessions to a New Computer
+regedit /e "%userprofile%\desktop\putty-registry.reg" HKEY_CURRENT_USER\Software\Simontatham
