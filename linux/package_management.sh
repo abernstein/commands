@@ -31,6 +31,10 @@ rpm -qpl <PACKAGE>
 # Verifying Package
 rpm -V <OPTIONS> <PACKAGE>
 
+# Define or Evaluate Custom Macros for RPM to Use
+rpm --eval %_usrsrc
+rpm --define '<MACRO> <VALUE>'
+
 # Clear Yum Cache
 yum clean packages|metadata|dbcache|all
 
