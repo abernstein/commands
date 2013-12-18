@@ -18,6 +18,8 @@ rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE} %{INSTALLTIME:date}\n" <PACKAGE(S)>
 
 # Determine Dependencies for a Specific Package
 rpm -q --qf "[%{REQUIRENAME} %{REQUIREFLAGS:depflags} %{REQUIREVERSION}\n]" <PACKAGE(S)>
+# or Remove -p for installed package
+rpm -qp --requires <PACKAGE>
 
 # List Configuration Files Defined in Package
 rpm -qpc <PACKAGE>
