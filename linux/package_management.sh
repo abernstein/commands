@@ -20,7 +20,7 @@ rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE} %{INSTALLTIME:date}\n" <PACKAGE(S)>
 rpm -q --qf "[%{REQUIRENAME} %{REQUIREFLAGS:depflags} %{REQUIREVERSION}\n]" <PACKAGE(S)>
 
 # Determine Package Relationships or Remove -p for installed package
-rpm -qp --requires|provides|conflicts|whatrequires <PACKAGE>
+rpm -qp --requires|provides|conflicts|whatrequires|whatprovides <PACKAGE>
 
 # List Configuration Files Defined in Package
 rpm -qpc <PACKAGE>
