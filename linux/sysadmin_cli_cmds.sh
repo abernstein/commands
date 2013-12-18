@@ -1,5 +1,5 @@
 # Sanely refresh environment
-exec su - <username>
+exec su - <USERNAME>
 
 # Generate possible completion matches for word according to the options, which may be any option accepted by the complete builtin
 compgen -abcdefgjksuv
@@ -23,7 +23,7 @@ alias -p
 tail -f /var/log/syslog  
 
 # Find only the differences
-diff -C0 <file1> <file2> | grep -e "^\!"
+diff -C0 <FILE1> <FILE2> | grep -e "^\!"
 
 # Find all running services
 sudo /sbin/service --status-all | grep -i "running"
@@ -42,27 +42,6 @@ find <HAYSTACK> -type d -name <DIRECTORY> -prune -o -name <PATTERN> -print
 # Find unique values
 sort -u
 
-# Find unique RPM builds
-rpm -qa | grep <package name>
-
-# Evaulate package details in RPM
-rpm -qi <package name>
-
-# Review Installation History
-rpm -qa --queryformat "%{installtime} (%{installtime:date}) %{name}\n" | sort -n
-
-# List last installed packages from RPM
-rpm -qa --last | head
-
-# Custom Output Filenames in Multiple Package Queries
-rpm -q --queryformat "[%-15{=NAME} %-50{FILENAMES}\n]" sendmail bash
-
-# Determine Installation Time for a Specific Package
-rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE} %{INSTALLTIME:date}\n" bash
-
-# Clear Yum Cache
-yum clean |packages|metadata|dbcache|all
-
 # Check a URL
 curl -v <URL> -d <DATA>
 
@@ -71,9 +50,6 @@ man -k <SERVICE>
 
 # Status of Memcache
 memstat --servers=<SERVERS>
-
-# Downgrade Package
-yum downgrade <PACKAGE>
 
 # Find all symlinks pointing to mounts
 symlinks -vr / | grep -i mnt
