@@ -1,3 +1,7 @@
+# Set soft-wrap at 80, not breaking words
+:set formatoptions+=w
+:set tw=80
+
 # Where grep came from (RE being Regular Expression):
 :g/RE/p
  
