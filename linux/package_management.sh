@@ -1,3 +1,7 @@
+# Setup Local Build Env
+mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+if [ ! -e ~/.rpmmacros ]; then echo '%_topdir %(echo $HOME)/rpmbuild' > ~/.rpmmacros; else echo "Configuration File Exists"; fi
+
 # View Current RPM Settings
 rpm -–showrc
 
