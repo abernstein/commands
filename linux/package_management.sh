@@ -1,3 +1,6 @@
+# View Current RPM Settings
+rpm -–showrc
+
 # Find unique RPM builds
 rpm -qa | grep <PACKAGE>
 
