@@ -18,8 +18,9 @@ rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE} %{INSTALLTIME:date}\n" <PACKAGE(S)>
 
 # Determine Dependencies for a Specific Package
 rpm -q --qf "[%{REQUIRENAME} %{REQUIREFLAGS:depflags} %{REQUIREVERSION}\n]" <PACKAGE(S)>
-# or Remove -p for installed package
-rpm -qp --requires <PACKAGE>
+
+# Determine Package Relationships or Remove -p for installed package
+rpm -qp --requires|provides|conflicts <PACKAGE>
 
 # List Configuration Files Defined in Package
 rpm -qpc <PACKAGE>
@@ -31,7 +32,7 @@ rpm -qpl <PACKAGE>
 rpm -V <OPTIONS> <PACKAGE>
 
 # Clear Yum Cache
-yum clean |packages|metadata|dbcache|all
+yum clean packages|metadata|dbcache|all
 
 # Downgrade Package
 yum downgrade <PACKAGE>
