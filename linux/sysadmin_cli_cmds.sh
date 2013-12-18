@@ -51,6 +51,9 @@ rpm -qi <package name>
 # Review Installation History
 rpm -qa --queryformat "%{installtime} (%{installtime:date}) %{name}\n" | sort -n
 
+# List last installed packages from RPM
+rpm -qa --last | head
+
 # Clear Yum Cache
 yum clean |packages|metadata|dbcache|all
 
