@@ -54,6 +54,12 @@ rpm -qa --queryformat "%{installtime} (%{installtime:date}) %{name}\n" | sort -n
 # List last installed packages from RPM
 rpm -qa --last | head
 
+# Custom Output Filenames in Multiple Package Queries
+rpm -q --queryformat "[%-15{=NAME} %-50{FILENAMES}\n]" sendmail bash
+
+# Determine Installation Time for a Specific Package
+rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE} %{INSTALLTIME:date}\n" bash
+
 # Clear Yum Cache
 yum clean |packages|metadata|dbcache|all
 
