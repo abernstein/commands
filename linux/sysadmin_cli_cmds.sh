@@ -90,3 +90,10 @@ whereis bash
 
 ## safe examples ##
 ssh <username>@<hostname> -- --commandName --arg1 --arg2
+
+# Evaluate System Configurations
+ls /etc/sysconfig/
+cat /etc/sysconfig/<FILE>
+
+# Viewing Virtual File System Information
+cat /proc/<FILE>
