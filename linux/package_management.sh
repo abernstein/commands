@@ -35,6 +35,13 @@ rpm -V <OPTIONS> <PACKAGE>
 rpm --eval %_usrsrc
 rpm --define '<MACRO> <VALUE>'
 
+# Official RPM macros
+cat /usr/lib/rpm/macros
+# Per-system customizations
+cat /etc/rpm/macros
+# Per-user customizations
+cat $HOME/.rpmmacros
+
 # Clear Yum Cache
 yum clean packages|metadata|dbcache|all
 
