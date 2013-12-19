@@ -19,6 +19,9 @@ compgen -A binding
 # Print a list of all aliases name=value
 alias -p
 
+# View the type and/or code of functions
+type <FUNCTION>|<FILE>
+
 # Realtime tailing of a log
 tail -f /var/log/syslog  
 
