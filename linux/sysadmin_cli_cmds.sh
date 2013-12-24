@@ -42,6 +42,35 @@ sudo find / -xdev -noleaf -type f -name *.pem -or -name *.crt
 # Find pattern with exclusion (http://www.theunixschool.com/2012/07/find-command-15-examples-to-exclude.html)
 find <HAYSTACK> -type d -name <DIRECTORY> -prune -o -name <PATTERN> -print
 
+# Find pattern and execute command on results
+find -iname "<PATTERN>" -exec md5sum {} \;
+
+# Find pattern within a certain depth of the filesystem
+find -mindepth 3 -maxdepth 5 -name <PATTERN>
+
+# Find content that doesn't match the pattern.
+find -maxdepth 1 -not -iname "<PATTERN>"
+
+# Find all files that are readable by the world in your home directory, 
+# irrespective of other permissions for that file
+find . -perm -g=r -type f -exec ls -l {} \;
+
+# Find file with group read permission only
+find . -perm g=r -type f -exec ls -l {} \;
+find . -perm 040 -type f -exec ls -l {} \;
+
+# Find all empty files
+find ~ -empty
+
+# Find files by comparing the mod time of another file
+find -newer <FILE>
+
+# Find the Top 5 Big Files
+find . -type f -exec ls -s {} \; | sort -n -r | head -5
+
+# Find based on size +|-
+find ~ -size +100M
+
 # Find unique values
 sort -u
 
@@ -92,7 +121,7 @@ which bash
 whereis bash
 
 ## safe examples ##
-ssh <username>@<hostname> -- --commandName --arg1 --arg2
+ssh <USERNAME>@<HOSTNAME> -- --<COMMAND> --<ARG1> --<ARG2>
 
 # Evaluate System Configurations
 ls /etc/sysconfig/
@@ -100,3 +129,45 @@ cat /etc/sysconfig/<FILE>
 
 # Viewing Virtual File System Information
 cat /proc/<FILE>
+
+# View all crons of the a user
+crontab -l
+crontab -u <USERNAME> -l
+
+# Edit cron jobs
+crontab -e
+crontab -u <USERNAME> -e
+
+# Match full words, instead of just the pattern
+grep -iw "<PATTERN>" <FILE>
+
+# Display lines before (B)/after (A)/around (N)
+grep -A <#> "<PATTERN>" <FILE>
+grep -B <#> "<PATTERN>" <FILE>
+grep -N <#> "<PATTERN>" <FILE>
+
+# Recursively
+grep -r
+
+# Inverse match
+grep -v
+
+# Count of patterns matched or not matched
+grep -c 
+grep -vc
+
+# Execute previous command from history
+!!
+!-1
+ctrl+P
+ctrl+R
+!<COMMAND>
+
+# Download full website
+wget --mirror -p --convert-links -P ./<LOCAL-DIR> <WEBSITE-URL>
+
+# Download specific file types
+wget -r -A<EXTENSION> <URL>
+
+# Test download link
+wget --spider <URL>
