@@ -1,15 +1,22 @@
-# Check port availability
-netstat -an | grep <PORT>
-
-# Show open ports and processes that own them
-sudo lsof -i  Show open ports and processes that own them
-sudo netstat -tulpn
-
 # Show configured NTP servers
 /usr/sbin/ntpq -pn
 
 # Show NTP Stats
 ntpstat
+
+# List all network files in use by a specific process
+lsof -i -a -c <SERVICE>
+lsof -i -a -p <PID>
+
+# List processes which are listening on a particular port
+lsof -i :<PORT>
+
+# Show open ports and processes that own them
+sudo lsof -i
+sudo netstat -tulpn
+
+# Check port availability
+netstat -an | grep <PORT>
 
 # Check IP and Port Availability
 nc -vz <IP> <port>	
