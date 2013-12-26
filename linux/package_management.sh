@@ -33,7 +33,7 @@ rpm -qp --requires|provides|conflicts|whatrequires|whatprovides <PACKAGE>
 rpm -qpc <PACKAGE>
 
 # List All Files Defined in Package
-rpm -qpl <PACKAGE>
+rpm -ql <PACKAGE>
 
 # Verifying Package
 rpm -V <OPTIONS> <PACKAGE>
