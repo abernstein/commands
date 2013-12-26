@@ -116,7 +116,7 @@ echo -n host1 host2 host3 host4 | xargs -d" " -n1 -P30 -I+ ssh + "sudo service a
 # Redirect Output and Errors to /dev/null
 command > /dev/null 2>&1
 
-# Search for files using a database stored for just that purpose
+# Search for files using a database stored for just that purpose, has slocate for secure
 locate <PATTERN>
 # Update the datebase used by locate()
 updatedb
@@ -180,3 +180,7 @@ wget -r -A<EXTENSION> <URL>
 
 # Test download link
 wget --spider <URL>
+
+# Get/Set File ACLs
+getfacl *
+setfacl -m u:bozo:rw <FILE>
