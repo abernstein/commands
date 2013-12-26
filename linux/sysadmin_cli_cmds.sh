@@ -122,8 +122,12 @@ locate <PATTERN>
 updatedb
 
 # Find the executing file
+# gives the full path to "command."
 which bash
+# gives the full path to "command," but also to its manpage.
 whereis bash
+# identifying system commands and important configuration files
+whatis bash
 
 ## safe examples ##
 ssh <USERNAME>@<HOSTNAME> -- --<COMMAND> --<ARG1> --<ARG2>
