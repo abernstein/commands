@@ -83,6 +83,10 @@ man -k <SERVICE>
 # Status of Memcache
 memstat --servers=<SERVERS>
 
+# Find all symlinks and where they point
+symlinks -vr / 
+readlink <SYMLINK>
+
 # Find all symlinks pointing to mounts
 symlinks -vr / | grep -i mnt
 
