@@ -45,6 +45,9 @@ find <HAYSTACK> -type d -name <DIRECTORY> -prune -o -name <PATTERN> -print
 # Find pattern and execute command on results
 find -iname "<PATTERN>" -exec md5sum {} \;
 
+# Find - Don’t descend directories on other filesystems
+find / -xdev -name "*.log"
+
 # Find pattern within a certain depth of the filesystem
 find -mindepth 3 -maxdepth 5 -name <PATTERN>
 
@@ -64,6 +67,8 @@ find ~ -empty
 
 # Find files by comparing the mod time of another file
 find -newer <FILE>
+find -anewer <FILE>
+find . -mmin -60
 
 # Find the Top 5 Big Files
 find . -type f -exec ls -s {} \; | sort -n -r | head -5
