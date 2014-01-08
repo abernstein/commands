@@ -23,3 +23,6 @@ $(basename $BASH_SOURCE)
 # 127	        Command Not found
 # 126	        Not an executable
 grep "<PATTERN>" <FILE>; echo $?
+
+# Diff two Arrays and sort
+diff <(printf "%s\n" "${a[@]}" | sort ) <(printf "%s\n" "${b[@]}" | sort)
