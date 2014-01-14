@@ -26,6 +26,9 @@ git checkout BRANCH_NAME_HERE
 # Crush Last Three Commits
 git reset --soft HEAD~3; git commit
 
+# Return the location that HEAD is pointing to
+git symbolic-ref HEAD
+
 # Create a git alias
 git config --global alias.<NAME> "<CODE>"
 
