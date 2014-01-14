@@ -147,7 +147,6 @@ g~w
 # Use lighter coloring scheme for a dark background:
 :set background=dark
  
- 
 # Htmlize a file using the current syntax highlighting:
 :so $VIMRUNTIME/syntax/2html.vim
  
@@ -159,3 +158,6 @@ vim -n -c ':so $VIMRUNTIME/syntax/2html.vim' -c ':wqa' $1 > /dev/null 2> /dev/nu
  
 #Now just run:  
 shell> 2html.sh foo.py
+
+# Temporarily disable autoindent during paste operation, must close with nopaste
+:set paste/nopaste
