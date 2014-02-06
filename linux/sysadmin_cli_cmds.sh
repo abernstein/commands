@@ -200,3 +200,5 @@ echo "stats settings" | nc localhost 11211
 echo "stats items" | nc localhost 11211
 echo "stats cachedump <SLAB CLASS> <NUMBER OF ITEMS>" | nc localhost 11211
 
+# Re-play command
+watch <OPTIONS> <COMMAND>
