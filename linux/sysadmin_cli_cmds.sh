@@ -202,3 +202,6 @@ echo "stats cachedump <SLAB CLASS> <NUMBER OF ITEMS>" | nc localhost 11211
 
 # Re-play command
 watch <OPTIONS> <COMMAND>
+
+# Print user identity
+id <OPTION> <USERNAME>
