@@ -205,3 +205,14 @@ watch <OPTIONS> <COMMAND>
 
 # Print user identity
 id <OPTION> <USERNAME>
+
+# Remove Duplicates from a file using uniq command
+sort <SOURCE> | uniq
+sort –u <SOURCE>
+
+# Display Duplicate Row Count Using Uniq
+sort <SOURCE> | uniq –c
+
+# Display Only Duplicate Rows Using Uniq
+sort <SOURCE> | uniq –cd
+
