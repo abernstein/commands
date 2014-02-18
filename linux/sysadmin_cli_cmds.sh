@@ -216,3 +216,5 @@ sort <SOURCE> | uniq –c
 # Display Only Duplicate Rows Using Uniq
 sort <SOURCE> | uniq –cd
 
+# List the #N oldest files in folder
+ls -ltr <FOLDER> | head -<N>
