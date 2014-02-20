@@ -239,3 +239,7 @@ mkpasswd -l <LENGTH>
 
 # List Processes in a Hierarchy
 ps -e -o pid,args --forest
+pstree
+
+# List all threads for a particular process
+ps -C java -L -o pid,tid,pcpu,state,nlwp,args
