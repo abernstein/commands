@@ -225,6 +225,10 @@ ls -ltr <FOLDER> | head -<N>
 # Current Usage Status of Memory
 free <OPTIONS>
 
+# Collect, report, or save system activity information.
+# http://www.thegeekstuff.com/2011/03/sar-examples/
+sar
+
 # Virtual Memory, I/O, Disk Stats
 vmstat
 iostat
