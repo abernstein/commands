@@ -25,3 +25,16 @@ echo "stats" | nc localhost 11211
 echo "stats settings" | nc localhost 11211
 echo "stats items" | nc localhost 11211
 echo "stats cachedump <SLAB CLASS> <NUMBER OF ITEMS>" | nc localhost 11211
+
+# Status of Memcache
+memstat --servers=<SERVERS>
+
+# Determine running time for command `cp`
+time cp <filename> <new filename>
+
+# Check Open Files by Service
+lsof | awk '{print $1}' | sort | uniq -c | sort -rn | head
+
+# Find all running services
+sudo /sbin/service --status-all | grep -i "running"
+/sbin/chkconfig --list | grep 3:on
