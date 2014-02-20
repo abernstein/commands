@@ -54,3 +54,6 @@ yum clean packages|metadata|dbcache|all
 
 # Downgrade Package
 yum downgrade <PACKAGE>
+
+# Check for Available Updates
+yum check-update
