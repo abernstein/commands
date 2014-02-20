@@ -224,3 +224,6 @@ ls -ltr <FOLDER> | head -<N>
 
 # Current Usage Status of Memory
 free <OPTIONS>
+
+# Make a Password
+mkpasswd -l <LENGTH>
