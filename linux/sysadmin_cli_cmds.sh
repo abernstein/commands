@@ -236,3 +236,6 @@ mpstat
 
 # Make a Password
 mkpasswd -l <LENGTH>
+
+# List Processes in a Hierarchy
+ps -e -o pid,args --forest
