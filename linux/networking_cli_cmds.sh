@@ -42,3 +42,7 @@ pgrep httpd
 # Dump Traffic From Specific Servers
 sudo /usr/sbin/tcpdump -i bond0 -s0 -nnvvv host 10.6.0.14 or host 10.6.0.10 or host 10.6.0.5 or host 10.6.0.6 \
   -w /tmp/<filename>.cap
+  
+# Lookup DNS Information
+nslookup <OPTIONS> <DOMAIN>
+dig <OPTIONS> <DOMAIN>
