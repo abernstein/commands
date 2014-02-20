@@ -19,3 +19,9 @@ pstree
 
 # List all threads for a particular process
 ps -C java -L -o pid,tid,pcpu,state,nlwp,args
+
+# Check stats of Memcache
+echo "stats" | nc localhost 11211
+echo "stats settings" | nc localhost 11211
+echo "stats items" | nc localhost 11211
+echo "stats cachedump <SLAB CLASS> <NUMBER OF ITEMS>" | nc localhost 11211
