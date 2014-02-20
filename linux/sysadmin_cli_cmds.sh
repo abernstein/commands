@@ -225,5 +225,9 @@ ls -ltr <FOLDER> | head -<N>
 # Current Usage Status of Memory
 free <OPTIONS>
 
+# Virtual Memory, I/O Stats
+vmstat <OPTION> 
+iostat
+
 # Make a Password
 mkpasswd -l <LENGTH>
