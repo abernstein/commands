@@ -57,6 +57,9 @@ git push --tags
 # Nuke a remote branch
 git push <REMOTE NAME> :<BRANCH NAME>
 
+# Push branch with a different name to remote
+git push <REMOTE NAME> <LOCAL NAME>:<REMOTE NAME>
+
 # Change the Remote Repo URL
 git remote set-url origin <new url>
 
